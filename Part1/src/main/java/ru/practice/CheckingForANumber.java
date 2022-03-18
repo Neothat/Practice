@@ -1,33 +1,40 @@
 package ru.practice;
 
+/**
+ * Проверка, содержит ли строковое значение только цифры.
+ * Написать программу, которая проверяет, что заданная строка содержит только цифры.
+ */
 public class CheckingForANumber {
 
-    private static final String ORIGIN = "ajknsndbiojphajsdbvgu3";
-
-    // Mine
-//    public static void main(String[] args) {
-//        boolean contentNumber = ORIGIN.chars()
-//                .mapToObj(c -> (char) c)
-//                .noneMatch(Character::isDigit);
-//        System.out.println(contentNumber);
-//    }
-
-    // Var 1
-//    public static void main(String[] args) {
-//        for (int i = 0; i < ORIGIN.length(); i++) {
-//            if (!Character.isDigit(ORIGIN.charAt(i))) {
-//                System.out.println(false);
-//            }
-//        }
-//        System.out.println(true);
-//    }
-    // Var 2
-//    public static void main(String[] args) {
-//        boolean contentNumber = ORIGIN.chars()
-//                .anyMatch(Character::isDigit);
-//    }
-
     public static void main(String[] args) {
-        boolean contentNumber = ORIGIN.matches("[0-9]+");
+
+        final String string1 = "ajknsndbiojphajsdbvgu3";
+        final String string2 = "3345636";
+
+        System.out.println(containsOnlyDigitsVar1(string1));
+        System.out.println(containsOnlyDigitsVar1(string2));
+        System.out.println(containsOnlyDigitsVar2(string1));
+        System.out.println(containsOnlyDigitsVar2(string2));
+        System.out.println(containsOnlyDigitsVar3(string1));
+        System.out.println(containsOnlyDigitsVar3(string2));
+    }
+
+    private static boolean containsOnlyDigitsVar1(String str) {
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private static boolean containsOnlyDigitsVar2(String str) {
+        return str.chars()
+                .allMatch(Character::isDigit);
+    }
+
+    private static boolean containsOnlyDigitsVar3(String str) {
+        return str.matches("[0-9]+");
     }
 }
