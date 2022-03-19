@@ -1,34 +1,51 @@
 package ru.practice;
 
-import java.util.Objects;
+import com.sun.deploy.util.StringUtils;
+
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+/**
+ * Инвертирование букв и слов.
+ * Написать программу, которая инвертирует буквы каждого слова, и программу,
+ * которая инвертирует буквы каждого слова и сами слова.
+ */
 public class Coup {
-    private static final String ORIGIN = "One Two Three";
-    private static final Pattern PATTERN = Pattern.compile(" +");
+	private static final String string = "One Two Three";
+	private static final String WHITESPACE = " ";
+	private static final Pattern PATTERN = Pattern.compile(" +");
 
-    // Mine
-//    public static void main(String[] args) {
-//        StringBuilder stringBuilder = new StringBuilder();
-//        for (int i = ORIGIN.length()-1; i >= 0; --i) {
-//            stringBuilder.append(ORIGIN.charAt(i));
-//        }
-//        System.out.println(stringBuilder);
-//    }
+	public static void main(String[] args) {
+		System.out.println(reverseWordVar1(string));
+		System.out.println(reverseWordVar2(string));
 
-    // Var 1
-//    public static void main(String[] args) {
-//        System.out.println(
-//                PATTERN.splitAsStream(ORIGIN)
-//                        .map(w -> new StringBuilder(w).reverse())
-//                        .collect(Collectors.joining(" "))
-//        );
-//    }
+		System.out.println(reverse(string));
+	}
 
-    public static void main(String[] args) {
-        System.out.println(
-                new StringBuilder(ORIGIN).reverse()
-        );
-    }
+	private static String reverseWordVar1(String str) {
+		String[] words = str.split(WHITESPACE);
+		StringBuilder reversedString = new StringBuilder();
+
+		for (String word : words) {
+			StringBuilder reverseWord = new StringBuilder();
+
+			for (int i = words.length; i >= 0; i--) {
+				reverseWord.append(word.charAt(i));
+			}
+
+			reversedString.append(reverseWord).append(WHITESPACE);
+		}
+
+		return reversedString.toString();
+	}
+
+	private static String reverseWordVar2(String str) {
+		return PATTERN.splitAsStream(str)
+				.map(w -> new StringBuilder(w).reverse())
+				.collect(Collectors.joining(" "));
+	}
+
+	private static String reverse(String str) {
+		return new StringBuilder(str).reverse().toString();
+	}
 }
