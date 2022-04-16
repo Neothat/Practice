@@ -11,15 +11,15 @@ import java.util.stream.Collectors;
  * которая инвертирует буквы каждого слова и сами слова.
  */
 public class Coup {
-	private static final String string = "One Two Three";
+	private static final String STRING = "One Two Three";
 	private static final String WHITESPACE = " ";
 	private static final Pattern PATTERN = Pattern.compile(" +");
 
 	public static void main(String[] args) {
-		System.out.println(reverseWordVar1(string));
-		System.out.println(reverseWordVar2(string));
+		System.out.println(reverseWordVar1(STRING));
+		System.out.println(reverseWordVar2(STRING));
 
-		System.out.println(reverse(string));
+		System.out.println(reverse(STRING));
 	}
 
 	private static String reverseWordVar1(String str) {
