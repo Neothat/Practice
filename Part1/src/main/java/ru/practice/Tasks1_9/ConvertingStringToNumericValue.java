@@ -1,4 +1,4 @@
-package ru.practice.Tasks1_10;
+package ru.practice.Tasks1_9;
 
 /**
  * Конвертирование строки в значение типа int, long, float или double.
