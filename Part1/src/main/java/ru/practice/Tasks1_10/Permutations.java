@@ -1,9 +1,12 @@
-package ru.practice;
+package ru.practice.Tasks1_10;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.IntStream;
 
+/**
+ * Генерирование всех перестановок. Написать программу, которая генерирует все перестановки заданной строки.
+ */
 public class Permutations {
 
     public static void main(String[] args) {

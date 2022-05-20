@@ -1,4 +1,4 @@
-package ru.practice;
+package ru.practice.Tasks1_10;
 
 /**
  * Подсчет появлений некоторого символа. Написать программу,

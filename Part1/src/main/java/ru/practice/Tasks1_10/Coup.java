@@ -1,4 +1,4 @@
-package ru.practice;
+package ru.practice.Tasks1_10;
 
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;

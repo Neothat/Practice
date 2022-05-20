@@ -1,4 +1,4 @@
-package ru.practice;
+package ru.practice.Tasks1_10;
 
 /**
  * Проверка, содержит ли строковое значение только цифры.
