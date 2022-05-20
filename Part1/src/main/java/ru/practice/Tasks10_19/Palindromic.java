@@ -1,4 +1,4 @@
-package ru.practice.Tasks10_20;
+package ru.practice.Tasks10_19;
 
 import java.util.stream.IntStream;
 
