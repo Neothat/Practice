@@ -12,7 +12,6 @@ public class JoiningStrings {
 
 	private static final char DELIMITER = '-';
 
-
 	public static void main(String[] args) {
 		System.out.println(joinByDelimiterVar1(DELIMITER, "123", "234", "qwerty"));
 		System.out.println(joinByDelimiterVar2(DELIMITER, "123", "234", "qwerty"));
