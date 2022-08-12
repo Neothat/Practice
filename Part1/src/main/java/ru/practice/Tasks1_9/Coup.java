@@ -27,7 +27,7 @@ public class Coup {
 		for (String word : words) {
 			StringBuilder reverseWord = new StringBuilder();
 
-			for (int i = words.length; i >= 0; i--) {
+			for (int i = word.length() - 1; i >= 0; i--) {
 				reverseWord.append(word.charAt(i));
 			}
 
