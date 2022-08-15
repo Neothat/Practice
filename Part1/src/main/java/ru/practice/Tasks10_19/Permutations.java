@@ -1,4 +1,4 @@
-package ru.practice.Tasks1_9;
+package ru.practice.Tasks10_19;
 
 import java.util.HashSet;
 import java.util.Set;

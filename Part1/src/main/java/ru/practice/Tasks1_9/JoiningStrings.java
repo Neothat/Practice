@@ -1,4 +1,4 @@
-package ru.practice.Tasks10_19;
+package ru.practice.Tasks1_9;
 
 import java.util.Arrays;
 import java.util.StringJoiner;
